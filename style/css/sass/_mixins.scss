@@ -1,0 +1,29 @@
+// Create transition CSS tag
+@mixin transition($transition...) {
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -webkit-transition: $transition;
+    transition: $transition;
+  }
+  
+  // Transform px to rem
+  @function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+  }
+  
+  // Create box-shadow CSS tag
+  @mixin box-shadow($values...) {
+    -webkit-box-shadow: $values;
+    -moz-box-shadow: $values;
+    box-shadow: $values;
+  }
+  
+  // Create transform CSS tag
+  @mixin transform($values) {
+    -webkit-box-transform: $values;
+    -moz-box-transform: $values;
+    -webkit-transform: $values;
+    -ms-transform: $values;
+    transform: $values;
+  }
